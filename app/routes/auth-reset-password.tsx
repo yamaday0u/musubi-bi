@@ -65,7 +65,10 @@ export default function AuthResetPassword() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
       <div className="px-6 pt-10">
-        <a href="/login" className="text-slate-400 text-sm flex items-center gap-1">
+        <a
+          href="/login"
+          className="text-slate-400 text-sm flex items-center gap-1"
+        >
           <span aria-hidden>←</span> ログインへ
         </a>
       </div>
