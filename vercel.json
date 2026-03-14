@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/koyomi-api/:path*",
+      "destination": "https://koyomi.zingsystem.com/api/:path*"
+    }
+  ]
+}
