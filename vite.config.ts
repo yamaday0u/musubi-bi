@@ -13,13 +13,4 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  server: {
-    proxy: {
-      "/koyomi-api": {
-        target: "https://koyomi.zingsystem.com",
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/koyomi-api/, "/api"),
-      },
-    },
-  },
 })
