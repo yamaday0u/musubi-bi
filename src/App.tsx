@@ -185,6 +185,7 @@ export default function App() {
           <p className="mt-1">
             スコアはあくまで参考です。ふたりで大切な日を選んでください 💕
           </p>
+          <p className="mt-2">© 2026 yamaday0u. All rights reserved.</p>
         </footer>
       </main>
     </div>
