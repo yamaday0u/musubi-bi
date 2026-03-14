@@ -3,6 +3,7 @@ import { Heart, Search, Loader2 } from "lucide-react";
 import { isAfter, differenceInDays } from "date-fns";
 import { DateRangePicker } from "@/components/DateRangePicker";
 import { RankingCard } from "@/components/RankingCard";
+import { AdBanner } from "@/components/AdBanner";
 import { Button } from "@/components/ui/button";
 import { fetchRangeData } from "@/lib/koyomiApi";
 import { scoreRange, type DayScore } from "@/lib/scoring";
@@ -164,6 +165,9 @@ export default function App() {
           </section>
         )}
 
+        {/* 広告 */}
+        <AdBanner className="mt-4" />
+
         {/* フッター */}
         <footer className="text-center text-xs text-gray-400 pb-8">
           <p>
@@ -181,6 +185,7 @@ export default function App() {
           <p className="mt-1">
             スコアはあくまで参考です。ふたりで大切な日を選んでください 💕
           </p>
+          <p className="mt-2">© 2026 yamaday0u. All rights reserved.</p>
         </footer>
       </main>
     </div>
