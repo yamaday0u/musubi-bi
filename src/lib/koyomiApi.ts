@@ -31,7 +31,7 @@ export async function fetchMonthData(year: number, month: number): Promise<Koyom
   }
 
   const mm = String(month).padStart(2, "0");
-  const base = "/koyomi-api";
+  const base = "https://koyomi.zingsystem.com/api";
   const url = `${base}/?mode=m&cnt=1&targetyyyy=${year}&targetmm=${mm}&targetdd=01`;
 
   const res = await fetch(url);
