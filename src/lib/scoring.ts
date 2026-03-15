@@ -33,8 +33,18 @@ const FUSEIJUUBI_PATTERN: Record<number, number[]> = {
 
 // 黒日（受死日）パターン（月 → 該当する日）
 const KOKUBI_PATTERN: Record<number, number> = {
-  1: 18, 2: 1, 3: 18, 4: 14, 5: 3, 6: 17,
-  7: 20, 8: 7, 9: 21, 10: 9, 11: 23, 12: 12,
+  1: 18,
+  2: 1,
+  3: 18,
+  4: 14,
+  5: 3,
+  6: 17,
+  7: 20,
+  8: 7,
+  9: 21,
+  10: 9,
+  11: 23,
+  12: 12,
 };
 
 function isFuseijuubi(date: Date): boolean {
@@ -118,6 +128,10 @@ export function scoreDay(date: Date, koyomi?: KoyomiDay): DayScore {
     score += 25;
     tags.push({ label: "いい夫婦の日", type: "love" });
   }
+  if (month === 4 && day === 22) {
+    score += 25;
+    tags.push({ label: "よい夫婦の日", type: "love" });
+  }
   if (month === 12 && day === 12) {
     score += 25;
     tags.push({ label: "ダーズンローズデー", type: "love" });
@@ -189,7 +203,7 @@ export function scoreDay(date: Date, koyomi?: KoyomiDay): DayScore {
 export function scoreRange(
   startDate: Date,
   endDate: Date,
-  koyomiMap: Map<string, KoyomiDay>
+  koyomiMap: Map<string, KoyomiDay>,
 ): DayScore[] {
   const days = eachDayOfInterval({ start: startDate, end: endDate });
   return days
